@@ -4,13 +4,13 @@ import java.nio.file.attribute.FileTime;
 
 public interface InterfazManejoFicheros {
 	
-	public boolean existeFichero(Path patch); // indica si existe el fichero dado
+	public boolean existeFichero(Path patch); // Indica si existe el fichero dado
 	
-	public boolean puedeEscribirFichero(Path patch); // indica si se puede escribir en el fichero dado
+	public boolean puedeEscribirFichero(Path patch); // Indica si se puede escribir en el fichero dado
 	
-	public boolean puedeEjecutarFichero(Path patch); // indica si se puede ejecutar el fichero dado
+	public boolean puedeEjecutarFichero(Path patch); // Indica si se puede ejecutar el fichero dado
 	
-	public long tamañoFichero(Path patch); // devuelve el tamaño del fichero
+	public long tamañoFichero(Path patch); // Devuelve el tamaño del fichero
 	
 	public String rutaAbsoluta(Path patch); // Devuelve la ruta absoluta de un fichero
 	
@@ -22,11 +22,10 @@ public interface InterfazManejoFicheros {
 	
 	public boolean creaDirectorio(Path patch); // Crea un directorio en la ruta dada, si se realiza correctamente devuelve true en caso contrario devuelve false
 	
-	public boolean renombraFichero(Path patch); // renombra un fichero en la ruta dada, si se realiza correctamente devuelve true en caso contrario devuelve false
+	public boolean renombraFichero(Path patch); // Renombra un fichero en la ruta dada, si se realiza correctamente devuelve true en caso contrario devuelve false
 	
-	public boolean borrar(Path patch); // borra un fichero en la ruta dada, si se realiza correctamente devuelve true en caso contrario devuelve false
+	public boolean borrar(Path patch); // Borra un fichero en la ruta dada, si se realiza correctamente devuelve true en caso contrario devuelve false
 	
-	public boolean touch(Path patch); // crea un archivo vacío en la ruta indicada, si se realiza correctamente devuelve true en caso contrario devuelve false
+	public boolean touch(Path patch); // Crea un archivo vacío en la ruta indicada, si se realiza correctamente devuelve true en caso contrario devuelve false
 
-	
 }
