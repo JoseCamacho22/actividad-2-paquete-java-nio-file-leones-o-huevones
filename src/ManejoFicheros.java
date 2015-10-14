@@ -16,37 +16,37 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 	@Override
 	// Metodo1
 	public boolean existeFichero(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 
 	@Override
 	// Metodo2
 	public boolean puedeEscribirFichero(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 
 	@Override
 	// Metodo3
 	public boolean puedeEjecutarFichero(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 
 	@Override
 	// Metodo4
-	public long tamañoFichero(Path patch) {
-		// TODO Apéndice de método generado automáticamente
-		System.out.println("\nMétodo 4 \n");
+	public long tamaÃ±oFichero(Path patch) {
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
+		System.out.println("\nMï¿½todo 4 \n");
 		long valor = 0;
 		try {
 			valor = Files.size(patch);
 		} catch (IOException e) {
-			// TODO Bloque catch generado automáticamente
+			// TODO Bloque catch generado automï¿½ticamente
 			e.printStackTrace();
 		}
-		System.out.println("El tamaño del fichero es : "
+		System.out.println("El tamaï¿½o del fichero es : "
 				+ valor + " bytes");
 
 		return valor;
@@ -55,37 +55,37 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 	@Override
 	// Metodo5
 	public String rutaAbsoluta(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
 	}
 
 	@Override
 	// Metodo6
 	public String[] listarDirectorio(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
 	}
 
 	@Override
 	// Metodo7
 	public String[] listarDirectorio(Path ruta, String extension) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
 	}
 
 	@Override
 	// Metodo8
 	public String[] listarModificads(Path patch, FileTime file) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
 	}
 
 	@Override
 	// Metodo9
 	public boolean creaDirectorio(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 
-		System.out.println("\nMétodo 9\n");
+		System.out.println("\nMï¿½todo 9\n");
 		
 		System.out.println("Escribe el nombre para el nuevo directorio: \n");
 		Scanner n = new Scanner(System.in);
@@ -110,20 +110,20 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 	@Override
 	// Metodo10
 	public boolean renombraFichero(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 
 	@Override
 	// Metodo11
 	public boolean borrar(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 
-		System.out.println("\nMétodo 11 \n");
+		System.out.println("\nMï¿½todo 11 \n");
 		try {
 			Files.delete(patch);
 		} catch (IOException e) {
-			// TODO Bloque catch generado automáticamente
+			// TODO Bloque catch generado automï¿½ticamente
 			e.printStackTrace();
 		}
 		return false;
@@ -132,9 +132,9 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 	@Override
 	// Metodo12
 	public boolean touch(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		
-		System.out.println("\nMétodo 12\n");
+		System.out.println("\nMï¿½todo 12\n");
 		
 		System.out.println("Escribe el nombre para el nuevo fichero: \n");
 		Scanner n = new Scanner(System.in);
@@ -153,7 +153,7 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 		try {
 			original.createNewFile();
 		} catch (IOException e) {
-			// TODO Bloque catch generado automáticamente
+			// TODO Bloque catch generado automï¿½ticamente
 			e.printStackTrace();
 		}
 		

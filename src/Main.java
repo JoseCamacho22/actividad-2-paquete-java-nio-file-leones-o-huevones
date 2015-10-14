@@ -10,8 +10,6 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) throws ParseException {
-		// TODO Apéndice de método generado automáticamente
-
 		// Creacion Patch
         Path dir = Paths.get(".");
 
@@ -32,7 +30,7 @@ public class Main {
         ejecutar.existeFichero(dir);//Metodo1
         ejecutar.puedeEscribirFichero(dir);//Metodo2	
         ejecutar.puedeEjecutarFichero(dir);//Metodo3
-        ejecutar.tamañoFichero(dir);//Metodo4
+        ejecutar.tamaÃ±oFichero(dir);//Metodo4
         ejecutar.rutaAbsoluta(dir);//Metodo5
         ejecutar.listarDirectorio(dir);//Metodo6
 		ejecutar.listarDirectorio(dir, extension);//Metodo7
