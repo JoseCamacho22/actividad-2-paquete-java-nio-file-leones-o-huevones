@@ -6,13 +6,13 @@ import java.nio.file.attribute.FileTime;
 
 public interface InterfazManejoFicheros {
 	
-	public boolean existeFichero(Path patch); // Indica si existe el fichero dado
+	public boolean existeFichero(Path path); // Indica si existe el fichero dado
 	
-	public boolean puedeEscribirFichero(Path patch); // Indica si se puede escribir en el fichero dado
+	public boolean puedeEscribirFichero(Path path); // Indica si se puede escribir en el fichero dado
 	
-	public boolean puedeEjecutarFichero(Path patch); // Indica si se puede ejecutar el fichero dado
+	public boolean puedeEjecutarFichero(Path path); // Indica si se puede ejecutar el fichero dado
 	
-	public long tamañoFichero(Path patch); // Devuelve el tamaño del fichero
+	public long tama�oFichero(Path patch); // Devuelve el tamaño del fichero
 	
 	public String rutaAbsoluta(Path patch); // Devuelve la ruta absoluta de un fichero
 	

@@ -6,6 +6,13 @@ import java.io.PrintWriter;
 import java.nio.file.DirectoryIteratorException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
+import java.io.IOException;
+import java.nio.file.DirectoryIteratorException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.FileTime;
@@ -41,7 +48,7 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 
 	@Override
 	// Metodo4
-	public long tamaÃ±oFichero(Path patch) {
+	public long tamañoFichero(Path patch) {
 		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return 0;
 	}
