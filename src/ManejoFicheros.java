@@ -12,7 +12,6 @@ import java.nio.file.attribute.FileTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
-
 import javax.swing.JOptionPane;
 
 public class ManejoFicheros implements InterfazManejoFicheros {
@@ -20,7 +19,7 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 	@Override
 	// Metodo1
 	public boolean existeFichero(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 
@@ -36,28 +35,28 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 	@Override
 	// Metodo3
 	public boolean puedeEjecutarFichero(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 
 	@Override
 	// Metodo4
-	public long tamañoFichero(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+	public long tamaÃ±oFichero(Path patch) {
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return 0;
 	}
 
 	@Override
 	// Metodo5
 	public String rutaAbsoluta(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
 	}
 
 	@Override
 	// Metodo6
 	public String[] listarDirectorio(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
 	}
 
@@ -103,36 +102,37 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 	@Override
 	// Metodo8
 	public String[] listarModificads(Path patch, FileTime file) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
 	}
 
 	@Override
 	// Metodo9
 	public boolean creaDirectorio(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 
 	@Override
 	// Metodo10
 	public boolean renombraFichero(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 
 	@Override
 	// Metodo11
 	public boolean borrar(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
 
 	@Override
 	// Metodo12
 	public boolean touch(Path patch) {
-		// TODO Apéndice de método generado automáticamente
+		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return false;
 	}
+
 
 }
