@@ -32,6 +32,11 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 	public boolean puedeEjecutarFichero(Path patch) {
 		// TODO Ap�ndice de m�todo generado autom�ticamente
 		return false;
+		//Directamente devuelve un booleano true si es ejecutable, false si no es ejecutable. 
+		//Aunque el patch no fuese valido el resultado seria false pero no saltarian excepciones.
+		System.out.println("\nMetodo 3\n");
+		System.out.println(Files.isExecutable(patch));
+		return  Files.isExecutable(patch);
 	}
 
 	@Override
