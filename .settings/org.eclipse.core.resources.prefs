@@ -1,7 +1,14 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
+encoding//src/Main.java=UTF-8
+=======
 encoding//src/InterfazManejoFicheros.java=ISO-8859-1
 encoding//src/ManejoFicheros.java=ISO-8859-1
 <<<<<<< HEAD
 encoding/src=ISO-8859-1
 =======
 >>>>>>> refs/remotes/origin/rama_jose
+<<<<<<< HEAD
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> refs/remotes/origin/rama_miguel

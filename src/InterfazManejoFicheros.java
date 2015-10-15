@@ -2,6 +2,8 @@ import java.nio.*;
 import java.nio.file.Path;
 import java.nio.file.attribute.FileTime;
 
+
+
 public interface InterfazManejoFicheros {
 	
 	public boolean existeFichero(Path path); // Indica si existe el fichero dado
