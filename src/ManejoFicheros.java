@@ -9,29 +9,41 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.FileTime;
 import java.util.Scanner;
-import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.DirectoryIteratorException;
+import java.nio.file.DirectoryStream;
+
+
 
 public class ManejoFicheros implements InterfazManejoFicheros {
 
-	@Override
-	// Metodo1
-	public boolean existeFichero(Path patch) {
-		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
+	@Override // Metodo1
+	public boolean existeFichero(Path path) {
+		System.out.println("Metodo1\n");
+		//	Files.exists and Files.notExists
+			//Files f = new Files(path);
+
+				if (Files.exists(path)) {
+					System.out.println("El fichero existe");
+				} else {
+					System.out.println("El fichero no existe");
+				}
+
 		return false;
 	}
 
-	@Override
-	// Metodo2
-	public boolean puedeEscribirFichero(Path patch) {
-		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
+
+	@Override//Metodo2
+	public boolean puedeEscribirFichero(Path path) {
+					
 		return false;
 	}
 
-	@Override
-	// Metodo3
+
+	@Override//Metodo3
 	public boolean puedeEjecutarFichero(Path patch) {
-		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
-		return false;
 		//Directamente devuelve un booleano true si es ejecutable, false si no es ejecutable. 
 		//Aunque el patch no fuese valido el resultado seria false pero no saltarian excepciones.
 		System.out.println("\nMetodo 3\n");
@@ -39,9 +51,8 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 		return  Files.isExecutable(patch);
 	}
 
-	@Override
-	// Metodo4
-	public long tamaÃ±oFichero(Path patch) {
+	@Override// Metodo4
+	public long tamañoFichero(Path patch) {
 		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		System.out.println("\nMï¿½todo 4 \n");
 		long valor = 0;
@@ -57,22 +68,38 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 		return valor;
 	}
 
-	@Override
-	// Metodo5
-	public String rutaAbsoluta(Path patch) {
-		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
+
+	@Override//Metodo5
+	public String rutaAbsoluta(Path patch){
+		System.out.println("\nMetodo5\n");
+		System.out.format("toString: %s%n", patch.toString()); 
 		return null;
 	}
 
-	@Override
-	// Metodo6
-	public String[] listarDirectorio(Path patch) {
-		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
-		return null;
-	}
+	@Override//Metodo6
+	
+	public String[] listarDirectorio(Path path) {
+		System.out.println("\nMetodo6\n");
+		
+		String[] filesList = path.toFile().list();//añado esto porque si no me devuelve un String[] no sabía realizar la prueba de comparacion de metodos
+		try (DirectoryStream<Path> stream = Files.newDirectoryStream(path)) {
+			System.out.println("Utilizando NIO > Archvivos encontrados:");
+			for (Path i : stream) {
+				System.out.println(i.getFileName());
+			
+			}
+			return filesList;
+		} //En caso de que salte un excepción devolveria NULL
+		catch (IOException | DirectoryIteratorException e) {
+			System.err.println(e);
+			
+			return null;
+		}
 
-	@Override
-	// Metodo7
+		}
+	
+	
+	@Override//Metodo7
 	public String[] listarDirectorio(Path ruta, String extension) {
 		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
 		return null;
