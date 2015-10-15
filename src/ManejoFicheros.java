@@ -1,35 +1,13 @@
-import java.awt.List;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.DirectoryNotEmptyException;
-import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.attribute.FileTime;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.file.DirectoryIteratorException;
 import java.nio.file.DirectoryStream;
-
-import java.nio.file.Files;
-import java.io.IOException;
-import java.nio.file.DirectoryIteratorException;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.attribute.FileTime;
-
-
 
 public class ManejoFicheros implements InterfazManejoFicheros {
 
@@ -150,11 +128,29 @@ public class ManejoFicheros implements InterfazManejoFicheros {
 			return null;
 		}
 
-	@Override
-	// Metodo8
+	@Override//Metodo8
 	public String[] listarModificads(Path patch, FileTime file) {
-		// TODO Apï¿½ndice de mï¿½todo generado automï¿½ticamente
-		return null;
+		//Recorremos el directorio actual comparando cada fecha de ultima modificacion con la fecha dada.
+		System.out.println("\nMetodo 8\n");
+		try (DirectoryStream<Path> stream = Files.newDirectoryStream(patch)) {
+            ArrayList<String> EncontradosAL = new ArrayList<String>();
+     
+            for (Path i : stream) {
+                FileTime fileTime = Files.getLastModifiedTime(i);
+                if(fileTime.compareTo(file)>=0){
+                	System.out.println(i.getFileName().toString());
+                    EncontradosAL.add(i.getFileName().toString());
+                }
+            }
+            String []Encontrados = new String[EncontradosAL.size()];
+            EncontradosAL.toArray(Encontrados);
+            return Encontrados;
+            
+        } //En caso de que salte un excepción devolveria Null
+        catch (IOException | DirectoryIteratorException e) {
+            System.err.println(e);
+            return null;
+        }
 	}
 
 	@Override
